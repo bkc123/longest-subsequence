@@ -34,27 +34,28 @@ public class AlternativeWaysToSolveLongestSubSequence extends SequenceAndLongest
 				}	
 
 			}
-			
-			//System.out.println("size of the stack is: "+ stack.size());
+			System.out.println("********************************************************");
+			System.out.println("size of the stack is: "+ stack.size());
 			longestArr= new Integer[stack.size()];
 			longestArr= obj.toArray(stack);
 
 			//System.out.println("size of the previous array is: "+ longestArr1.length);
 			//System.out.println("size of the current array is: "+ longestArr.length);
-			if (longestArr1.length <longestArr.length) {
+			//if (longestArr1.length <longestArr.length) {
 				longestArr1= longestArr;
 
 				for (Integer each: longestArr)
 				{
 					System.out.println(each + " ");
 				}
-			}
+			//}
+				System.out.println("********************************************************");
 			
 			while(!stack.isEmpty()) {
 				stack.pop();
 			}
 		}
-
+		System.out.println("********************************************************");
 		return preStack;
 
 	}

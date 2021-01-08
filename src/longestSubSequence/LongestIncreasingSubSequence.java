@@ -15,9 +15,9 @@ public class LongestIncreasingSubSequence {
 		int [] arr1st = {10,22,9,33,21,50,41,60,80};
 		int [] myArr= myObj.populateArray(20);
 		
-		System.out.println("\nHere is the possible longest increasing subSequence of arr1st: ");
+		System.out.println("\nHere is all the possible  increasing subSequence of arr1st for each index: ");
 		Stack<Integer> mystack =   myObj1.subSequence(arr1st);
-		System.out.println("\nHere is the possible longest increasing subSequence of numbers: ");
+		System.out.println("\nHere is all the possible longest increasing subSequence of numbers for each index: ");
 		Stack<Integer> mystack2 =   myObj1.subSequence(numbers);
 		
 		myObj.printArray(myArr);
