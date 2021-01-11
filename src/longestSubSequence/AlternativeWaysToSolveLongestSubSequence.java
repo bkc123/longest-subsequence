@@ -7,56 +7,55 @@ import java.util.Stack;
 import java.util.TreeMap;
 
 public class AlternativeWaysToSolveLongestSubSequence extends SequenceAndLongestIncSubSequence {
-	//int[] arr3=  { 10,22,9,33,21,50,41,60,80};
+	
 	Stack <Integer> preStack= new Stack<>();
-	Integer[] longestArr1= new Integer[preStack.size()] ;
-	//Stack <Integer> myLongestStack= new Stack<>();
+	Integer finalLongestArr[];
+	ArrayList<Integer[]> longestArr1 ;
 	SequenceAndLongestIncSubSequence obj= new SequenceAndLongestIncSubSequence();
 
-	//int stackSize= preStack.size();
-
-	public Stack <Integer> subSequence(int [] arr) {
-		//System.out.println("\nsize of the previous stack is: "+longestStack.size()+ '\n');
+	public Integer[] subSequence(int [] arr) {
+		this.longestArr1= new ArrayList<Integer[] >(arr.length);
 		Integer[] longestArr;
-		Stack <Integer> preStack= new Stack<>();
+		int len = 0;
 		Stack<Integer> stack = new Stack<> ();
 		for (int k=0; k < arr.length; k++) {
 			int j =k;
-			//System.out.println('\n');
 			stack.push(arr[j]);
-			//System.out.println(stack.peek());
 			for (int i = k; i < arr.length-1 ; i++) {
-				//j= i;
+			
 				if (arr[j] < arr[i+1]){
 					stack.push(arr[i+1]);
-					//System.out.println(stack.peek());
 					j= i+1;		
 				}	
 
 			}
-			System.out.println("********************************************************");
-			System.out.println("size of the stack is: "+ stack.size());
+		
 			longestArr= new Integer[stack.size()];
 			longestArr= obj.toArray(stack);
-
-			//System.out.println("size of the previous array is: "+ longestArr1.length);
-			//System.out.println("size of the current array is: "+ longestArr.length);
-			//if (longestArr1.length <longestArr.length) {
-				longestArr1= longestArr;
-
-				for (Integer each: longestArr)
-				{
-					System.out.println(each + " ");
-				}
-			//}
-				System.out.println("********************************************************");
-			
+			this.longestArr1.add(longestArr);
 			while(!stack.isEmpty()) {
 				stack.pop();
 			}
 		}
-		System.out.println("********************************************************");
-		return preStack;
+		for (int i=0; i< this.longestArr1.size(); i++) {
+			Integer [] arrIndex= this.longestArr1.get(i);
+		
+			int l= arrIndex.length;
+			System.out.println("\nlength of "  +i+ " index is : " + l);
+			for(Integer p : arrIndex) {
+			System.out.println(p);
+			}
+			System.out.println("**************************************");
+			
+			if (len <l) {
+				len= l;
+				this.finalLongestArr= arrIndex;
+			}
+			
+		}
+		
+		System.out.println("\nlongest length of possible increasing sub sequence is: "+ len );
+		return finalLongestArr;
 
 	}
 
