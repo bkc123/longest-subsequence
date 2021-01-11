@@ -16,22 +16,22 @@ public class LongestIncreasingSubSequence {
 		
 		myObj.printArray(numbers);
 		//testing class AlternativeWays.... 
-		Integer[] longestArr1 =   myObj1.subSequence(arr1st);
-		System.out.println("\nHere is possible  increasing subSequence of numbers: ");
+		Integer[] longestArr1 =   myObj1.subSequence(numbers);
+		System.out.println("\nHere is possible longest increasing subSequence of numbers: ");
 		for (Integer each: longestArr1) {
 			System.out.println("longestArr1: " + each);
 			}
 		
 		myObj.printArray(arr1st);
-		Integer[]  longestArr2=   myObj1.subSequence(numbers);
-		System.out.println("\nHere is possible  increasing subSequence of arr1st: ");
+		Integer[]  longestArr2=   myObj1.subSequence(arr1st);
+		System.out.println("\nHere is possible longest increasing subSequence of arr1st: ");
 		for (Integer each: longestArr2) {
 		System.out.println("longestArr2: " + each);
 		}
-		System.out.println("Here is my auto generated arr: ");
+		System.out.println("\nHere is my auto generated arr: ");
 		myObj.printArray(myArr);
 		Integer[] longestArr3 =   myObj1.subSequence(myArr);
-		System.out.println("\nHere is possible  increasing subSequence of myArr: ");
+		System.out.println("\nHere is possible longest increasing subSequence of myArr: ");
 		for (Integer each: longestArr3) {
 		System.out.println("longestArr: " + each);
 		}

@@ -1,18 +1,20 @@
 package longestSubSequence;
 
-import java.io.IOException;
+
 import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Stack;
-import java.util.TreeMap;
+
 
 public class AlternativeWaysToSolveLongestSubSequence extends SequenceAndLongestIncSubSequence {
 	
 	Stack <Integer> preStack= new Stack<>();
 	Integer finalLongestArr[];
-	ArrayList<Integer[]> longestArr1 ;
+	ArrayList<Integer[]> longestArr1 ; // declare the arrayList  of the array to record all the increasing subarray 
+	// && to find the length of the each array within the list
 	SequenceAndLongestIncSubSequence obj= new SequenceAndLongestIncSubSequence();
 
+	// method to find the possible longest subArray from the array
 	public Integer[] subSequence(int [] arr) {
 		this.longestArr1= new ArrayList<Integer[] >(arr.length);
 		Integer[] longestArr;
@@ -32,11 +34,13 @@ public class AlternativeWaysToSolveLongestSubSequence extends SequenceAndLongest
 		
 			longestArr= new Integer[stack.size()];
 			longestArr= obj.toArray(stack);
+			// add the Integer[] in to the longestArr
 			this.longestArr1.add(longestArr);
 			while(!stack.isEmpty()) {
 				stack.pop();
 			}
 		}
+		// loop to find the longest possible subsequence 
 		for (int i=0; i< this.longestArr1.size(); i++) {
 			Integer [] arrIndex= this.longestArr1.get(i);
 		
