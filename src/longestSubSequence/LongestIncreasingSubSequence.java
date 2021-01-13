@@ -5,8 +5,13 @@ import java.util.Stack;
 public class LongestIncreasingSubSequence {
 
 	public static void main(String[] args) {
+		
+		longestSequence();
 
+		
+	}
 
+	public static void longestSequence() {
 		SequenceAndLongestIncSubSequence myObj= new SequenceAndLongestIncSubSequence();
 		AlternativeWaysToSolveLongestSubSequence myObj1= new AlternativeWaysToSolveLongestSubSequence();
 		
@@ -39,8 +44,7 @@ public class LongestIncreasingSubSequence {
 		System.out.print("]");
 		System.out.println("\n\n##################################################\n");
 		
-		
-		System.out.println("\nHere is my auto generated arr: ");
+		System.out.print("Auto generted myArr is: \n");
 		myObj.printArray(myArr);
 		Integer[] longestArr3 =   myObj1.subSequence(myArr);
 		System.out.println("\nHere is possible longest increasing subSequence of myArr: \n");
@@ -64,7 +68,7 @@ public class LongestIncreasingSubSequence {
 		
 		System.out.println("\n\n##################################################\n");
 		Integer [] result2 = myObj.findLongestIncreasingSubSequence(arr1st);
-		System.out.println("\nHere is my longest sub Sequence arr1st");
+		System.out.println("\nHere is my longest sub Sequence of arr1st");
 		System.out.print("[ ");
 		for (Integer i: result2) {
 
@@ -83,6 +87,6 @@ public class LongestIncreasingSubSequence {
 
 		}
 		System.out.print("]");
+	
 	}
-
 }
