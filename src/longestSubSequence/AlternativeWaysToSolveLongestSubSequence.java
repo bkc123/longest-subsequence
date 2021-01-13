@@ -60,7 +60,7 @@ public class AlternativeWaysToSolveLongestSubSequence extends SequenceAndLongest
 			
 		}
 		
-		System.out.println("\nlongest length of possible increasing sub sequence is: "+ len );
+		System.out.println("\n\nlongest length of possible increasing sub sequence is: "+ len );
 		return finalLongestArr;
 
 	}
