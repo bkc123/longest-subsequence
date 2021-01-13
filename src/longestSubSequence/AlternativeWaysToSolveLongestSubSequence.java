@@ -45,12 +45,14 @@ public class AlternativeWaysToSolveLongestSubSequence extends SequenceAndLongest
 			Integer [] arrIndex= this.longestArr1.get(i);
 		
 			int l= arrIndex.length;
-			System.out.println("\nlength of "  +i+ " index is : " + l);
+			/*System.out.println("\nlength of "  +i+ " index is : " + l);
+			System.out.print("[");
 			for(Integer p : arrIndex) {
-			System.out.println(p);
+			System.out.print( " " + p);
 			}
-			System.out.println("**************************************");
-			
+			System.out.print(" ]");
+			System.out.print("\n**************************************");
+			*/
 			if (len <l) {
 				len= l;
 				this.finalLongestArr= arrIndex;

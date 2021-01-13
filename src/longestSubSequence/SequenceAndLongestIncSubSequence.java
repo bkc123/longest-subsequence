@@ -25,6 +25,7 @@ public class SequenceAndLongestIncSubSequence {
 	
 	// methods to printArray
 	public void printArray (int [] arr) {
+	
 		System.out.print("\n[ ");
 		for (int i: arr) {
 			System.out.print(i + " ");
